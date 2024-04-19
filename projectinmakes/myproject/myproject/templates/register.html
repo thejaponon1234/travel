@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+</head>
+<body bgcolor="#1a1a1a" style="color: white; font-family: Arial, sans-serif; text-align: center; padding-top: 50px;">
+
+<h1 style="margin-bottom: 30px;">Register</h1>
+
+<form action="" method="POST" style="width: 300px; margin: 0 auto;">
+
+    {% csrf_token %}
+
+    <input type="text" name="username" placeholder="Username" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: none;">
+    <br>
+    <input type="text" name="first_name" placeholder="Firstname" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: none;">
+    <br>
+    <input type="text" name="last_name" placeholder="Lastname" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: none;">
+    <br>
+    <input type="email" name="email" placeholder="Email" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: none;">
+    <br>
+    <input type="password" name="password" placeholder="Password" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: none;">
+    <br>
+    <input type="password" name="password1" placeholder="Confirm Password" style="width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 5px; border: none;">
+    <br>
+    <input type="submit" value="Register" style="width: 100%; padding: 10px; border-radius: 5px; border: none; background-color: black; color: white; cursor: pointer;">
+
+
+
+
+</form>
+{% for msg in messages %}
+{{ msg }}
+{% endfor %}
+</body>
+</html>
